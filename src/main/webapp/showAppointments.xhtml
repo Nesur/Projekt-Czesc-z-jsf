@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+xmlns:ui="http://java.sun.com/jsf/facelets"
+xmlns:p="http://primefaces.org/ui"
+xmlns:f="http://java.sun.com/jsf/core"
+xmlns:h="http://java.sun.com/jsf/html"
+
+template="/templates/default.xhtml">
+	<ui:define name="content">
+		<h:form>
+
+			<p:dataTable id="dataTable" var="item" value="#{appointmentBean.allAppointments}">
+
+				<f:facet name="header">
+					All appointments	
+				</f:facet>
+
+				<p:column>
+					<f:facet name="header">
+						<h:outputText value="Intructor" />
+					</f:facet>
+					<h:outputText value="#{item.instructor}"/>
+				</p:column>
+
+				<p:column>
+					<f:facet name="header">
+						<h:outputText value="Student" />
+					</f:facet>
+					#{item.student}
+				</p:column>
+
+				<p:column>
+					<f:facet name="header">
+						<h:outputText value="Date" />
+					</f:facet>
+					#{item.date}
+				</p:column>
+
+				<p:column>
+					<f:facet name="header">
+						<h:outputText value="Time" />
+					</f:facet>
+					#{item.time}
+				</p:column>
+				<p:column>
+					<f:facet name="header">
+						<h:outputText value="Action" />
+					</f:facet>
+					<h:commandLink value="#{msg.actionDelete}" action="#{appointmentBean.deleteAppointment}"/>
+					</p:column>
+			</p:dataTable>
+
+		</h:form>
+	</ui:define>
+</ui:composition>

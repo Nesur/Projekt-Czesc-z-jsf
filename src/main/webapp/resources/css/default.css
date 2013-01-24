@@ -1,0 +1,87 @@
+body {
+   margin: 0;
+   padding: 0;
+   background-image:url("http://nla.am/arm/doc/TVGRQER/elishe/files/old_paper.jpg");
+   background-repeat: no-repeat;
+   background-attachment: fixed;
+   font-family: Verdana, sans-serif;
+   font-size: 0.9em;
+}
+
+.heading {
+  padding: 10px;
+background-image:url("http://www.mb3d.co.uk/mb3d/Wood_Objects_and_other_Wood_Based_Seamless_and_Tileable_High_Res_Textures_files/wood_box_01_1.jpg	");
+
+  border: 1px solid black;
+  font-size: 30px;
+  font-style: italic;
+  font-family:"Book Antiqua";
+  text-align: center;
+  height: 50px;
+  color:white;
+  
+}
+
+.menuAndContent {
+  width: 100%;
+  height: 100%;
+
+}
+
+.menu {
+  padding-right: 20px;
+  padding-left: 20px;
+  padding-bottom: 20px;
+  border: thin solid black;
+  position: absolute;
+  left: 10px;
+ overflow: hidden;
+  width: 200px;
+  background-image:url("http://subtlepatterns.subtlepatterns.netdna-cdn.com/patterns/paper.png");
+  top: 90px;
+   -webkit-border-bottom-left-radius: 20px;
+    -webkit-border-top-left-radius: 20px;
+      font-family:"Book Antiqua";
+      font-size:20px;
+     
+}
+a:link{
+	color:black;
+	text-decoration:none;
+	-webkit-transition: 1s;
+	padding:10px;
+	border-radius:10px;
+
+}
+a:hover{
+	color:white;
+	-webkit-transition: 1s;
+	background:#505050;
+	padding:10px;
+	border-radius:10px;
+
+}
+
+
+.content {
+  padding-right: 20px;
+  padding-left: 20px;
+  padding-bottom: 20px;
+  padding-top:20px;
+  overflow:hidden;
+  border: thin solid black;
+       background-image:url("http://subtlepatterns.subtlepatterns.netdna-cdn.com/patterns/paper.png");
+  font-size:20px;
+  position:absolute;
+  left: 225px; 
+  right: 65px;
+  top: 90px;
+ 
+
+  -webkit-border-bottom-left-radius: 20px;
+  -webkit-border-bottom-right-radius: 20px;
+  -webkit-border-top-right-radius: 20px;
+   font-family:"Book Antiqua";
+  
+}
+

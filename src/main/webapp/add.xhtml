@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+xmlns:ui="http://java.sun.com/jsf/facelets"
+xmlns:f="http://java.sun.com/jsf/core"
+xmlns:h="http://java.sun.com/jsf/html"
+xmlns:p="http://primefaces.org/ui"
+template="/templates/default.xhtml">
+	<ui:define name="content">
+		<h:form id="appointmentform">
+
+			<p:panelGrid columns="2">
+
+				<h:outputLabel value="Type instructor name: *" />
+				<p:inputText id="instructor" value="#{appointmentBean.appointment.instructor}" required="true" >
+					<f:validateLength maximum="18"/>
+				</p:inputText>
+			
+			
+				<h:outputText value="Type your name: *" />
+				<p:inputText id="student" value="#{appointmentBean.appointment.student}" required="true"/>
+				
+		
+
+				<h:outputText value="Date: *" />
+				<p:calendar value="#{appointmentBean.appointment.date}" id="popupCal" required="true" />  
+
+				<h:outputText value="Time: *" />
+				<p:inputMask id="time" value="#{appointmentBean.appointment.time}" required="true" mask="99:99" />
+
+				<h:outputText value="" />
+				<h:commandButton value="Submit"
+			action="#{appointmentBean.addAppointment}" style="font-size:20px;" />
+			   
+			</p:panelGrid>
+		
+  
+  
+  
+    
+		
+			<h:panelGrid>
+				<p:messages showDetail="#{true}" showSummary="#{false}" />
+			</h:panelGrid>
+
+		</h:form>
+	</ui:define>
+</ui:composition>
